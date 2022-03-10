@@ -2,7 +2,7 @@
 JavaScript Array 对象
 1. 属性：length
 2. 方法：
-	foreach()、concat()、filter()、find()、indexOf()、lastIndexOf()、join()、map()
+	foreach()、concat()、filter()、find()、indexOf()、lastIndexOf()、includes()、join()、map()
 	pop()、shift()、push()、slice()、toString()
 	sort()、reverse()
 **********************************************************************/
@@ -78,6 +78,9 @@ JavaScript Array 对象
 // var fruits = ["Banana", "Apple", "Orange", "Apple", "Mango"];
 // var a = fruits.lastIndexOf("Apple");
 // console.log(a);
+
+// var fruits = ["Banana", "Orange", "Apple", "Mango"];
+// var n = fruits.includes("Mango"); //返回true或false
 
 // var fruits = ["Banana", "Orange", "Apple", "Mango"];
 // var res = fruits.join();
