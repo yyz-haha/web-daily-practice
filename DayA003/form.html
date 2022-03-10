@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<!-- 表单 -->
+<!-- 		表单元素类型:text radio checkbox textarea password select-option email url range search button submit <input type="reset" value="" />
+		属性：name value placeholder required disabled checked selected -->
+		<form method="" action="dom01.html" name="form1">
+			性别：
+			<input type="radio" name="sex" value="man">男
+			<input type="radio" name="sex" value="women" checked>女
+			<input type="radio" name="sex" value="renyao">人妖
+			<br>爱好：
+			<input type="checkbox" name="interest" value="playgame">玩游戏
+			<input type="checkbox" name="interest" value="movie">看电影
+			<input type="checkbox" name="interset" value="travel" checked>旅行
+			<br>省份：
+			<select name="province" id="">
+				<option value="anhui">安徽省</option>
+				<option value="jiangsu">江苏省</option>
+				<option value="henan">河南省</option>
+				<option value="shanghai" selected>上海市</option>
+			</select>
+			<br><label for="user">用户名：</label><input type="text" id="user" name="username" value="xiaoming" size="30" maxlength="20">
+			<br>密&nbsp;&nbsp;码：<input type="password" id="pass" name="password" value="123456" size="20"><br>
+			<br><textarea rows="5" cols="10" readonly>hello world</textarea><br>
+			邮箱：<input type="email" name="email" placeholder="请输入邮箱" required><br>
+			URL：<input type="url" name="url" placeholder="请输入网址"><br>
+			数字：<input type="number" name="num" min="0" max="20" step="5" placeholder="number"><br>
+			滑块：<input type="range" name="range1" min="0" max="20" step="5"><br>
+			搜索框：<input type="search" name="search" placeholder="请输入要搜索的文字"><br>
+			隐藏域：<input type="hidden" name="ss" value="good"><br>
+			普通按钮：<input type="button" name="normal" value="点击" disabled><br>
+			提交按钮：<input type="submit" name="submit" value="提交"><br>
+			重置按钮：<input type="reset" name="reset" value="重置"><br>
+		</form>
+		<script>
+		// // 通过 HTML 对象选择器查找 HTML 对象
+		// var x = document.forms["form1"];
+		// console.log(x.elements[0].value);
+		// // console.log(document.forms);
+		
+		var x = document.forms["form1"]["email"].value;
+		if(x) {
+			console.log(x);
+		} else {
+			console.log("email is empty!")
+		}
+		</script>
+	</body>
+</html>

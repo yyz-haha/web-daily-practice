@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+		// this指向问题
+		// -----------------------------------------------------
+		// var name="zhoulujun";
+		// function say(){
+		// 	console.log(this.name)
+		// 	console.log(this)
+		// }
+		// say();  //this指向window
+		
+		// --------------------------------------------------------
+		// function say2(){
+		// 	var site="zhoulujun.cn";
+		// 	console.log(this.site);
+		// }
+		// say2();  //this指向window
+		
+		// -----------------------------------------------------------
+		// myObj2={
+		//     site:"zhoulujun.cn",
+		//     fn:function(){
+		//         console.log(this.site)
+		//     }
+		// }
+		// myObj2.fn();  //this指向myObj
+		
+		// -----------------------------------------------------------
+		// myObj3={
+		//     site:"zhoulujun.cn",
+		//     andy:{
+		//         site:"www.zhoulujun.cn",
+		//         fn:function(){
+		// 			console.log(this);
+		//             console.log(this.site);
+		//         }
+		//     }
+		// };
+		// myObj3.andy.fn();  //指向andy
+		
+		// var fn=myObj3.andy.fn;
+		// fn();  //this指向window
+		
+		// -------------------------------------------------------
+		// var myObj4 = {
+		// 	name:"andy",
+		// 	sayHi:function() {
+		// 		console.log(this);
+		// 		console.log("hello,I'm " + this.name);
+		// 	}
+		// };
+		// myObj4.sayHi();  //this指向myObj4
+		
+		// var cc = myObj4.sayHi;
+		// cc();  //this指向window
+		
+		// ------------------------------------------------------
+		// var name = "The Window";
+		
+		// 　　var object = {
+		// 　　　　name : "My Object",
+		
+		// 　　　　getNameFunc : function(){
+		// 　　　　　　return function(){
+		// 　　　　　　　　return this.name;
+		// 　　　　　　};
+		
+		// 　　　　}
+		
+		// 　　};
+		
+		// console.log(object.getNameFunc()());  //this指向window
+		
+		// ------------------------------------------------------
+		// 　　var name = "The Window";
+		
+		// 　　var object = {
+		// 　　　　name : "My Object",
+		
+		// 　　　　getNameFunc : function(){
+		// 　　　　　　var that = this;
+		// 　　　　　　return function(){
+		// 　　　　　　　　return that.name;
+		// 　　　　　　};
+		
+		// 　　　　}
+		
+		// 　　};
+		
+		// 　　console.log(object.getNameFunc()());  //this指向object
+		
+		</script>
+	</body>
+</html>

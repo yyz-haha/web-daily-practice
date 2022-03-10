@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<p>请输入一个0-10的数字：</p>
+		<input type="text" id="number">
+		<button type="button" onclick="myfunc()">Submit</button>
+		<p id="checkRes"></p>
+		<script>
+		function myfunc() {
+			var x = document.getElementById("number").value;
+			if(isNaN(x) || x<0 || x>10) {
+				document.getElementById("checkRes").innerHTML = "无效";
+			} else {
+				document.getElementById("checkRes").innerHTML = "有效";
+			}
+		}
+		</script>
+	</body>
+</html>

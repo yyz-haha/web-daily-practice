@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<!-- onchange -->
+		<div>请输入您的名字：<input type="text" placeholder="请输入您的名字" onchange="changeToUpper(this)"></div>
+		<p>光标离开文本框时，自动小写转大写</p>
+		<script>
+		function changeToUpper(obj) {
+			obj.value = obj.value.toUpperCase();
+		}
+		</script>
+	</body>
+</html>

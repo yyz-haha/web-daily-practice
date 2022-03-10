@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>浮动（float）带来的问题</title>
+    <style>
+        /* 清除所有元素默认的边距，进行“强定义” */
+        * {
+            padding: 0;
+            margin: 0;
+        }
+ 
+        /* 包裹住浮动元素 */
+        .parent {
+            /* overflow: hidden; */
+        }
+ 
+        /* 浮动元素的样式 */
+        .box {
+            float: right; 
+            width: 100px;
+            height: 30px;
+            background-color: #66DAFA;
+            text-align: center;
+            line-height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <p>下面的 p 元素相对于本元素p margin-top 定位，但是也会受 .box 盒子的影响。</p>
+ 
+    <!-- 清除浮动的两种方法：一、父元素.parent hold住 二、单独盒子清除浮动的影响 -->
+    <div class="parent">
+        <div class="box">.box</div>
+        <div class="box">.box</div>
+        <div class="box">.box</div>
+        <!--<div class="clear"></div>-->    <!-- 注释.parent 后解注本行 div -->
+    </div>
+ 
+    <!-- 受浮动（float）影响的元素 -->
+    <div class="p">受浮动（float）影响的元素</div>
+ 
+</body>
